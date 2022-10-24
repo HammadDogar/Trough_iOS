@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="RatingsTableViewCell" customModule="Trough" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="456" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="456" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86A-fd-Xhh">
+                        <rect key="frame" x="0.0" y="0.0" width="456" height="95"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4A-TI-guD">
+                                <rect key="frame" x="20" y="20" width="57" height="15"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingImage" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-Ew-g3z">
+                                <rect key="frame" x="87" y="17.5" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3cr-2q-PMP"/>
+                                    <constraint firstAttribute="width" constant="100" id="dvE-Ds-Me6"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smd-uq-lg1">
+                                <rect key="frame" x="20" y="45" width="416" height="45"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ajO-aK-Q4g">
+                                        <rect key="frame" x="0.0" y="0.0" width="416" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="bcR-zq-Mwq"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kse-eZ-e6o">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ajO-aK-Q4g" secondAttribute="bottom" id="040-Ii-IP6"/>
+                                    <constraint firstItem="ajO-aK-Q4g" firstAttribute="top" secondItem="smd-uq-lg1" secondAttribute="top" id="DUZ-bp-MLb"/>
+                                    <constraint firstItem="ajO-aK-Q4g" firstAttribute="leading" secondItem="smd-uq-lg1" secondAttribute="leading" id="gPL-dt-ZWN"/>
+                                    <constraint firstAttribute="trailing" secondItem="ajO-aK-Q4g" secondAttribute="trailing" id="yXB-9O-FaL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="smd-uq-lg1" secondAttribute="trailing" constant="20" id="3V7-SC-gVk"/>
+                            <constraint firstItem="5NE-Ew-g3z" firstAttribute="centerY" secondItem="y4A-TI-guD" secondAttribute="centerY" id="7RS-eq-jZu"/>
+                            <constraint firstAttribute="bottom" secondItem="smd-uq-lg1" secondAttribute="bottom" constant="5" id="XrT-SC-ZWs"/>
+                            <constraint firstItem="smd-uq-lg1" firstAttribute="top" secondItem="y4A-TI-guD" secondAttribute="bottom" constant="10" id="ko1-6A-dGZ"/>
+                            <constraint firstItem="y4A-TI-guD" firstAttribute="leading" secondItem="86A-fd-Xhh" secondAttribute="leading" constant="20" id="mea-8b-VYi"/>
+                            <constraint firstItem="smd-uq-lg1" firstAttribute="leading" secondItem="86A-fd-Xhh" secondAttribute="leading" constant="20" id="wo0-oo-vJA"/>
+                            <constraint firstItem="y4A-TI-guD" firstAttribute="top" secondItem="86A-fd-Xhh" secondAttribute="top" constant="20" id="xx7-jJ-Odd"/>
+                            <constraint firstItem="5NE-Ew-g3z" firstAttribute="leading" secondItem="y4A-TI-guD" secondAttribute="trailing" constant="10" id="yOv-La-ctX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="86A-fd-Xhh" secondAttribute="bottom" id="9Xd-1Y-6Qm"/>
+                    <constraint firstAttribute="trailing" secondItem="86A-fd-Xhh" secondAttribute="trailing" id="GhZ-ry-y5Y"/>
+                    <constraint firstItem="86A-fd-Xhh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HbH-nt-sW0"/>
+                    <constraint firstItem="86A-fd-Xhh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kkz-Eq-V7P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="ajO-aK-Q4g" id="W0R-I6-hjF"/>
+            </connections>
+            <point key="canvasLocation" x="236.23188405797103" y="125.55803571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ratingImage" width="259" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

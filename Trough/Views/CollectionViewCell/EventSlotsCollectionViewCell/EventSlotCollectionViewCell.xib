@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EventSlotCollectionViewCell" customModule="Trough" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-1N-jig">
+                        <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00 am - 1:00 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27I-eg-njG">
+                                <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                <color key="textColor" red="0.94902855159999999" green="0.94900804760000002" blue="0.94901221989999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.93333333330000001" green="0.67843137249999996" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.73333333333333328" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="27I-eg-njG" firstAttribute="leading" secondItem="ZA2-1N-jig" secondAttribute="leading" id="3XP-xi-xCW"/>
+                            <constraint firstAttribute="trailing" secondItem="27I-eg-njG" secondAttribute="trailing" id="FKK-nd-cLe"/>
+                            <constraint firstItem="27I-eg-njG" firstAttribute="top" secondItem="ZA2-1N-jig" secondAttribute="top" id="L3n-XC-mic"/>
+                            <constraint firstAttribute="bottom" secondItem="27I-eg-njG" secondAttribute="bottom" id="kHl-mb-JrJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZA2-1N-jig" secondAttribute="trailing" id="EaD-aa-nU4"/>
+                <constraint firstAttribute="bottom" secondItem="ZA2-1N-jig" secondAttribute="bottom" id="XC2-sf-x9j"/>
+                <constraint firstItem="ZA2-1N-jig" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hiT-sT-Lj5"/>
+                <constraint firstItem="ZA2-1N-jig" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ixb-Sp-Df9"/>
+            </constraints>
+            <size key="customSize" width="169" height="30"/>
+            <connections>
+                <outlet property="eventBackView" destination="ZA2-1N-jig" id="LNg-CL-RrL"/>
+                <outlet property="eventTimeLabel" destination="27I-eg-njG" id="0a2-gN-rEF"/>
+            </connections>
+            <point key="canvasLocation" x="121.0144927536232" y="49.553571428571423"/>
+        </collectionViewCell>
+    </objects>
+</document>
